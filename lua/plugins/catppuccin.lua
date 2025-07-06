@@ -8,6 +8,12 @@ return {
       require("catppuccin").setup({
         flavour = "mocha",
         transparent_background = true,
+        custom_highlights = function(colors)
+          return {
+            LineNr = { fg = "#9E9E9E" }, -- White for line numbers
+            CursorLineNr = { fg = "#DBDBDB", bold = true }, -- White + bold for current line number
+          }
+        end,
       })
     end,
   },
